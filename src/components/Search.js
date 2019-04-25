@@ -1,4 +1,6 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {search} from '../actions/search.js';
 
  
 class Search extends React.Component {
@@ -34,4 +36,24 @@ class Search extends React.Component {
   }
 }
 
-export default Search;
+
+const mapStateToProps = (state) => {
+  return {
+    videos: state.videos,
+    currentVideo: state.video,
+    value: state.value
+  };
+};
+
+//And then we need another function to be 
+//able to dispatch our search() action creator with a prop.
+
+//dispatching of action creators to props
+const mapDispatchToProps = (dispatch) => {
+  return {
+    dispatch(search(state.value));
+  };
+};
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Search);

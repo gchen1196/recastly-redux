@@ -16,7 +16,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getYouTubeVideos('react tutorials');
+    this.props.getYouTubeVideos('react tutorials');
   }
 
   handleVideoListEntryTitleClick(video) {
@@ -63,4 +63,6 @@ class App extends React.Component {
   }
 }
 
+
 export default App;
+//App at the end?

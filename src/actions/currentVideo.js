@@ -5,6 +5,8 @@ var changeVideo = (video) => ({
   video: video //clicked video
   //clicked video 
 });
+//input: obj
+//
 
 //dispatch(changeVideo(type));
 
