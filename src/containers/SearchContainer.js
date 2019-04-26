@@ -9,11 +9,11 @@ import handleSearchChange from '../actions/search.js';
 //HINT: use react-redux 'connect' method to generate a container component from
 //state and dispatch mappings.
 
-const mapStateToProps = (state) => {
-  return {
-    videos: state.videoList
-  };
-};
+// const mapStateToProps = (state) => {
+//   return {
+//     videos: state.videoList
+//   };
+// };
 
 
 
@@ -24,5 +24,5 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-var SearchContainer = connect(mapStateToProps, mapDispatchToProps)(Search)
+var SearchContainer = connect(null, mapDispatchToProps)(Search);
 export default SearchContainer;
