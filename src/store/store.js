@@ -4,11 +4,11 @@ import rootReducer from './../reducers/main.js';
 import exampleVideoData from '../data/exampleVideoData.js';
 
 // TODO:  Create your redux store, apply thunk as a middleware, and export it!
-var configureStore = createStore(
+//*
+var store = createStore(
   rootReducer,
-  exampleVideoData,
   applyMiddleware(thunk)
 );
 
 
-export default configureStore;
+export default store;

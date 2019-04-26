@@ -37,23 +37,7 @@ class Search extends React.Component {
 }
 
 
-const mapStateToProps = (state) => {
-  return {
-    videos: state.videos,
-    currentVideo: state.video,
-    value: state.value
-  };
-};
 
-//And then we need another function to be 
-//able to dispatch our search() action creator with a prop.
+export default Search;
 
-//dispatching of action creators to props
-const mapDispatchToProps = (dispatch) => {
-  return {
-    dispatch(search(state.value));
-  };
-};
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(Search);
+//export default connect(mapStateToProps, mapDispatchToProps)(Search);
